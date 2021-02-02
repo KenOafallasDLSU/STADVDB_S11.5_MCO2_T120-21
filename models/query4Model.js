@@ -9,7 +9,7 @@ exports.query4 = (district1, district2, ksymbol1, ksymbol2, quarter1, quarter2, 
               AND (a.accountDistrict = "${district1}" OR a.accountDistrict = "${district2}")
               AND (y.characterization = "${ksymbol1}" OR y.characterization = "${ksymbol2}")
               AND (i.quarter = "${quarter1}" OR i.quarter = "${quarter2}") 
-        GROUP BY y.characterization,  a.accountDistrict, i.quarter;`
+        GROUP BY y.characterization,  a.accountDistrict, i.quarter WITH ROLLUP;`
   console.log(sql)
 
   mysql.db.query(sql, (err, result) => {
