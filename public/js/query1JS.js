@@ -23,8 +23,11 @@ addNewRow = (item, parentDiv) => {
 
 $(document).ready(() => {
   $('#query-btn').on('click', () => {
-    let temp = $('#arbituary-id').text();
-    $.post('query1/postQuery1', {temp: temp}, (data, status) => {
+    
+    let timeid = $('#disp-type-select').val();
+    console.log(timeid);
+
+    $.post('query1/postQuery1', {timeid: timeid}, (data, status) => {
       let resultsTable = $('#results-table');
       resultsTable.empty();
       
@@ -41,7 +44,7 @@ $(document).ready(() => {
         if(item.accountid == null) {
           item.accountid = "null";
         }
-        addNewRow(item, resultsTable);x
+        addNewRow(item, resultsTable);
       });
     });
   });

@@ -13,6 +13,13 @@ exports.getQuery1 = (req, res) => {
       {label: "Account ID"},
       {label: "Total Amount"}
     ],
+    selectTypeOptions: [
+      {option: "19930105"},
+      {option: "19930107"},
+      {option: "19930110"},
+      {option: "19930111"}
+    ],
+    selectTypeLabel: "Time ID",
     results: [{
       timeid: "N/A",
       typeid: "N/A",
@@ -25,8 +32,8 @@ exports.getQuery1 = (req, res) => {
 };
 
 exports.postQuery1 = (req, res) => {
-  let temp = req.body.temp;
-  query1Model.query1(temp, (results, err) => {
+  let timeid = req.body.timeid;
+  query1Model.query1(timeid, (results, err) => {
     res.send(results);
   });
 };

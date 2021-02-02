@@ -5,11 +5,25 @@
     from the Transaction table of the schema to get its total transaction
     <span class="text-monospace">amount</span> per one, two, three, and four columns.</p>
     <p>This sample query only shows results from <span class="text-monospace">timeid = 19930105</span>
-    to <span class="text-monospace">timeid = 19930111.</span></p>
+    to <span class="text-monospace">timeid = 19930111</span>.
+    </p>
   </div>
   <div class="row justify-content-center">
-    <p id="arbituary-id" hidden>anything</p>
-    <button type="button" id="query-btn" class="btn btn-success">View Query</button>
+    <form>
+    <div class="form-group row justify-content-center">
+      <label for="disp-type" class="col-sm-0 col-form-label">{{selectTypeLabel}}</label>
+      <div class="col-sm-6">
+        <select id="disp-type-select" class="form-control">
+          {{#each selectTypeOptions}}
+          <option class="disp-type-option"value="{{option}}">{{option}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" id="query-btn" class="btn btn-success">Query</button>
+      </div>
+    </div>
+  </form>
   </div>
   <div class="row" id="table-div">
     <table class="table table-striped text-center">
