@@ -53,7 +53,7 @@ exports.renderMain = (req, res) => {
         },
         {
             val: 'household',
-            type: 'Household Payment'
+            type: 'Household'
         },
         {
             val: 'retirement_pension',
@@ -72,7 +72,7 @@ exports.renderMain = (req, res) => {
             type: 'Misc. Credit'
         }
         ],
-        results: []
+        result: []
         })
     })
 }

@@ -6,10 +6,10 @@ addRecordRow = (item, parentDiv) => {
     var quarter = document.createElement('td');
     var sum = document.createElement('td');
     
-    $(district).text(`${item.district}`)
-    $(characterization).text(`${item.characterization}`);
-    $(quarter).text(`${item.quarter}`);
-    $(sum).text(`${item.sum}`);
+    $(district).text(`${item.District}`)
+    $(characterization).text(`${item.Characterization}`);
+    $(quarter).text(`${item.Quarter}`);
+    $(sum).text(`${item.Sum}`);
 
     row.append(district);
     row.append(characterization);
