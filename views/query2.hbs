@@ -1,0 +1,44 @@
+<div id ='Query-1-1'>
+  <div class="form-group row justify-content-center">
+    <form>
+      <div class="form-row">
+        <div class="form-group col-sm-12 input-group">
+
+          <!-- Account ID Number Select -->
+          <label for="accountID">Select Account ID</label>
+          <div class="p-1">
+            <input type="number" min="1" max="22" name="accountID" id="accountID" value="1">
+          </div>
+
+          <!-- Execute Query button -->
+          <div>
+            <button type="button" id="btnSubmit" class="btn btn-md btn-success btn-sm">Query</button>
+          </div>                          
+        </div>     
+      </div> 
+    </form>
+  </div>
+
+  <table class="table table-striped">
+    <thead class="thread-dark">
+      <tr>
+        <th scope="col">Month</th>
+        <th scope="col">Quarter</th>
+        <th scope="col">Year</th>
+        <th scope="col">Total Transactions</th>
+        <th scope="col">Total Amount of Transactions</th>
+      </tr>
+    </thead>
+    <tbody id="resultRecords">
+      {{#each results}}
+        <tr>
+          <td>{{month}}</td>
+          <td>{{quarter}}</td>
+          <td>{{year}}</td>
+          <td>{{transactions}}</td>
+          <td>{{total}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
