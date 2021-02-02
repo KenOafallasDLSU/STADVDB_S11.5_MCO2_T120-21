@@ -3,8 +3,9 @@ const mysql = require("../mysql");
 exports.query1 = (query, next) => {
   var sql = 
   `SELECT trans.timeid as timeid, trans.typeid as typeid, trans.recipientid as recipientid, 
-          trans.accountid as accountid, SUM(trans.amount) as total, AVG(trans.amount) as average
+  trans.accountid as accountid, SUM(trans.amount) as total
   FROM financialwh.transactions trans
+  WHERE timeid >= 19930105 AND timeid <= 19930111
   GROUP BY trans.timeid, trans.typeid, trans.recipientid, trans.accountid
   WITH ROLLUP;`;
 

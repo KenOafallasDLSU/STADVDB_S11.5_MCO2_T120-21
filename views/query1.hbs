@@ -2,7 +2,7 @@
   <div class="row">
     <p>This roll up query uses four columns namely <span class="text-monospace">timeid,
       typeid, recipientid,</span> and <span class="text-monospace">accountid</span>
-    from the Transaction table of the schema to get its total and average transaction
+    from the Transaction table of the schema to get its total transaction
     <span class="text-monospace">amount</span> per one, two, three, and four columns.</p>
   </div>
   <div class="row justify-content-center">
@@ -24,7 +24,6 @@
             <td>{{recipientid}}</td>
             <td>{{accountid}}</td>
             <td>{{total}}</td>
-            <td>{{average}}</td>
           </tr>
         {{/each}}
       </tbody>

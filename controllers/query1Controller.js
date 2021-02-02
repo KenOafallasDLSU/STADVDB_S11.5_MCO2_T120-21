@@ -11,8 +11,7 @@ exports.getQuery1 = (req, res) => {
       {label: "Type ID"},
       {label: "Recipient ID"},
       {label: "Account ID"},
-      {label: "Total Amount"},
-      {label: "Average Amount"}
+      {label: "Total Amount"}
     ],
     results: [{
       timeid: "N/A",

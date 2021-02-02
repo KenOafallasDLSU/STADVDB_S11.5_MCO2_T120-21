@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 
 //creates express app
 const app = express()
-const port = 3000
+const port = 8080
 
 //create hbs engine
 app.engine('hbs', exphbs({

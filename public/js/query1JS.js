@@ -5,21 +5,18 @@ addNewRow = (item, parentDiv) => {
   var recipientid = document.createElement('td');
   var accountid = document.createElement('td');
   var total = document.createElement('td');
-  var average = document.createElement('td');
 
   $(timeid).text(item.timeid);
   $(typeid).text(item.typeid);
   $(recipientid).text(item.recipientid);
   $(accountid).text(item.accountid);
   $(total).text(item.total);
-  $(average).text(item.average);
 
   row.append(timeid);
   row.append(typeid);
   row.append(recipientid);
   row.append(accountid);
   row.append(total);
-  row.append(average);
 
   parentDiv.append(row);
 };
