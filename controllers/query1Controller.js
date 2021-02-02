@@ -27,7 +27,6 @@ exports.getQuery1 = (req, res) => {
 exports.postQuery1 = (req, res) => {
   let temp = req.body.temp;
   query1Model.query1(temp, (results, err) => {
-    console.log(results); //testing
     res.send(results);
   });
 };

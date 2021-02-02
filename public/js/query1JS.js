@@ -26,10 +26,25 @@ $(document).ready(() => {
     let temp = $('#arbituary-id').text();
     console.log(temp);
     $.post('query1/postQuery1', {temp: temp}, (data, status) => {
-      let resultsTable = $('results-table');
+      let resultsTable = $('#results-table');
       resultsTable.empty();
+
+      let size = Object.keys(data).length;
+      let counter = 0;
       
       data.forEach((item, index) => {
+        if(item.timeid == null) {
+          item.timeid = "null";
+        }
+        if(item.typeid == null) {
+          item.typeid = "null";
+        }
+        if(item.recipientid == null) {
+          item.recipientid = "null";
+        }
+        if(item.accountid == null) {
+          item.accountid = "null";
+        }
         addNewRow(item, resultsTable);
       });
     });
