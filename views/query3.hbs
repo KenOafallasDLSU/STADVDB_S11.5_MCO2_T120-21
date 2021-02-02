@@ -8,8 +8,8 @@
                 <label for="district">Select 1st District</label>
                 <div class="p-1">
                     <select id="districtSelect1" name="districtSelect1">
-                    {{#each districtList}}
-                        <option class = "districtOption1" value = {{ accountDistrict }}>{{accountDistrict }}</option>
+                    {{#each years}}
+                        <option class = "districtOption1" value = {{ this }}>{{ this }}</option>
                     {{/each}}
                 </select>
                 </div>

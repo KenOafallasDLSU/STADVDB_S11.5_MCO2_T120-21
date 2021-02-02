@@ -1,7 +1,7 @@
 const mysql = require('../mysql.js')
 
 exports.query3 = (year, next) => {
-  console.log("in query 3")
+  console.log("In query 3")
   let sql = 
        `SELECT e.year AS Year, e.quarter as Quarter, y.characterization as Characterization, COUNT(y.characterization) as Count
        FROM transactions t
