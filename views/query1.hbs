@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <p>This roll up query uses four columns namely <span class="text-monospace">timeid,
+      typeid, recipientid,</span> and <span class="text-monospace">accountid</span>
+    from the Transaction table of the schema to get its total and average transaction
+    <span class="text-monospace">amount</span> per one, two, three, and four columns.</p>
+  </div>
+  <div class="row justify-content-center">
+    <p id="arbituary-id" hidden>anything</p>
+    <button type="button" id="query-btn" class="btn btn-success">View Query</button>
+  </div>
+  <div class="row" id="table-div">
+    <table class="table table-striped text-center">
+      <thead>
+        {{#each headers}}
+          <th scope="col">{{label}}</th>
+        {{/each}}
+      </thead>
+      <tbody id="results-table">
+        {{#each results}}
+          <tr>
+            <td>{{timeid}}</td>
+            <td>{{typeid}}</td>
+            <td>{{recipientid}}</td>
+            <td>{{accountid}}</td>
+            <td>{{total}}</td>
+            <td>{{average}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
