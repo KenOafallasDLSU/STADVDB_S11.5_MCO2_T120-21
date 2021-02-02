@@ -7,5 +7,5 @@ exports.db = mysql.createConnection({
   //port: "3307",
   //user: "admin",
   password: "p@ssword",
-  database: "financial"
+  database: "financialwh"
 })

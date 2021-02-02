@@ -1,0 +1,112 @@
+<div id ='AllQuery'>
+  <div class="row p-1">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-sm-12 input-group">
+
+                <!-- District Drop Down -->
+                <label for="district">Select 1st District</label>
+                <div class="p-1">
+                    <select id="districtSelect1" name="districtSelect1">
+                    {{#each districtList}}
+                        <option class = "districtOption1" value = {{ accountDistrict }}>{{accountDistrict }}</option>
+                    {{/each}}
+                </select>
+                </div>
+
+                <!-- Characterization Type Number Select -->
+                <label for="kSymbolSelect1">Select Characterization Type</label>
+                <div class="p-1">
+                    <select id="kSymbolSelect1" name="kSymbolSelect1">
+                    {{#each kSymbolList}}
+                        <option class="kSymbolOption1" value={{ val }}>{{ type }}</option>
+                    {{/each}}
+                    </select>
+                </div>
+
+                <!-- Quarter Select -->
+                <label for="quarterSelect1">Select Characterization Type</label>
+                <div class="p-1">
+                    <select id="quarterSelect1" name="quarter1">
+                    {{#each quarterList}}
+                        <option class="quarterOption1" value={{ val }}>{{ type }}</option>
+                    {{/each}}
+                    </select>
+                </div>
+            </div> 
+        </div> 
+        <div class="form-row">
+            <div class="form-group col-sm-12 input-group">
+
+                <!-- District Drop Down -->
+                <label for="district2">Select 2nd District</label>
+                <div class="p-1">
+                    <select id="districtSelect2" name="districtSelect2">
+                    {{#each districtList}}
+                        <option class = "districtOption2" value = {{accountDistrict}}>{{accountDistrict}}</option>
+                    {{/each}}
+                    </select>
+                </div>
+
+                <!-- Characterization Type Number Select -->
+                <label for="kSymbolSelect2">Select Characterization Type</label>
+                <div class="p-1">
+                    <select id="kSymbolSelect2" name="kSymbolSelect2">
+                    {{#each kSymbolList}}
+                        <option class="kSymbolOption2" value={{ val }}>{{ type }}</option>
+                    {{/each}}
+                    </select>
+                </div>
+          
+                <!-- Quarter Select -->
+                <label for="quarterSelect2">Select Characterization Type</label>
+                <div class="p-1">
+                    <select id="quarterSelect2" name="quarter2">
+                    {{#each quarterList}}
+                        <option class="quarterOption2" value={{ val }}>{{ type }}</option>
+                    {{/each}}
+                    </select>
+                </div>
+            </div>
+        </div>
+          <!-- Execute Query button -->
+        <div class="form-row">
+            <button type="button" id="btnSubmit" class="btn btn-md btn-success btn-sm">Query</button>
+        </div>   
+    </form>
+  </div>
+
+  <div>
+    <p id="latestQuery">
+        <p class="m-1" id="dis1"></p>
+        <p class="m-1" id="ksym1"></p>
+        <p class="m-1" id="quar1"></p>
+
+        <p class="m-1" id="dis2"></p>
+        <p class="m-1" id="ksym2"></p>
+        <p class="m-1" id="quar2"></p>
+    </p>
+  </div>
+
+
+  <table class="table table-striped">
+    <thead class="thread-dark">
+      <tr>
+        <th scope="col">District</th>
+        <th scope="col">Characterization</th>
+        <th scope="col">Quarter</th>
+        <th scope="col">Sum</th>
+      </tr>
+    </thead>
+    <tbody id="resultRecords">
+      {{#each results}}
+        <tr>
+          <td>{{district}}</th>
+          <td>{{characterization}}</td>
+          <td>{{quarter}}</td>
+          <td>{{sum}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
