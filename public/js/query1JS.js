@@ -24,13 +24,9 @@ addNewRow = (item, parentDiv) => {
 $(document).ready(() => {
   $('#query-btn').on('click', () => {
     let temp = $('#arbituary-id').text();
-    console.log(temp);
     $.post('query1/postQuery1', {temp: temp}, (data, status) => {
       let resultsTable = $('#results-table');
       resultsTable.empty();
-
-      let size = Object.keys(data).length;
-      let counter = 0;
       
       data.forEach((item, index) => {
         if(item.timeid == null) {
@@ -45,7 +41,7 @@ $(document).ready(() => {
         if(item.accountid == null) {
           item.accountid = "null";
         }
-        addNewRow(item, resultsTable);
+        addNewRow(item, resultsTable);x
       });
     });
   });
