@@ -1,0 +1,57 @@
+<div id ='AllQuery'>
+  <div class="row p-1">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-sm-12 input-group">
+
+                <!-- District Drop Down -->
+                <label for="district">Select 1st District</label>
+                <div class="p-1">
+                    <select id="districtSelect1" name="districtSelect1">
+                    {{#each districtList}}
+                        <option class = "districtOption1" value = {{ accountDistrict }}>{{accountDistrict }}</option>
+                    {{/each}}
+                </select>
+                </div>
+                
+                <!-- Execute Query button -->
+                <div class="p-1">
+                    <button type="button" id="btnSubmit" class="btn btn-md btn-success btn-sm">Query</button>
+                </div>  
+            </div> 
+        </div> 
+          
+    </form>
+  </div>
+
+  <div>
+    <p id="latestQuery">
+        <p class="m-1" id="dis1"></p>
+        <p class="m-1" id="ksym1"></p>
+    </p>
+  </div>
+
+
+  <table class="table table-striped">
+    <thead class="thread-dark">
+      <tr>
+        <th scope="col">District</th>
+        <th scope="col">Characterization</th>
+        <th scope="col">Year</th>
+        <th scope="col">Quarter</th>
+        <th scope="col">Sum</th>
+      </tr>
+    </thead>
+    <tbody id="resultRecords">
+      {{#each result}}
+        <tr>
+          <td>{{District}}</th>
+          <td>{{Characterization}}</td>
+          <td>{{Year}}</td>
+          <td>{{Quarter}}</td>
+          <td>{{Sum}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
