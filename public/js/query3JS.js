@@ -20,12 +20,13 @@ addRecordRow = (item, parentDiv) => {
 }
 
 $(document).ready(() => {
-    $('#btnSubmit').on('click', () => {
-        let year = $('#yearSelect option:selected').text();
+    $('#slicebtn').on('click', () => {
+        console.log('beep');
+        let year = $('#yearSelect').val();
 
         console.log(`year: ${year}`);
 
-        $.post('query3view/postQuery3', {year: year}, (data, status) => {
+        $.post('query3/postQuery3', {year: year}, (data, status) => {
             console.log(data);
 
             let resultTable = $('#resultRecords');

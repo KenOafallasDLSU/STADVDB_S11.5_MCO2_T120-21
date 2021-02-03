@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 
 //creates express app
 const app = express()
-const port = 3000
+const port = 8080
 
 //create hbs engine
 app.engine('hbs', exphbs({
@@ -30,15 +30,15 @@ mysql.db.connect((err) => {
 
 //import routes
 const home = require('./routes/homeRoutes.js')
-//const query1 = require('./routes/query1Routes.js')
 const query2 = require('./routes/query2Routes.js')
+const query1 = require('./routes/query1Routes.js')
 const query3 = require('./routes/query3Routes.js')
 const query4 = require('./routes/query4Routes.js')
 
 //use routes
 app.use('/', home)
-//app.use('/query1', query1)
 app.use('/query2', query2)
+app.use('/query1', query1)
 app.use('/query3', query3)
 app.use('/query4view', query4)
 

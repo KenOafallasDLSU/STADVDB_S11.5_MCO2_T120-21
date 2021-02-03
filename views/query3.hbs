@@ -5,18 +5,18 @@
             <div class="form-group col-sm-12 input-group">
 
                 <!-- District Drop Down -->
-                <label for="district">Select 1st District</label>
+                <label for="year">Select Year</label>
                 <div class="p-1">
-                    <select id="districtSelect1" name="districtSelect1">
+                    <select id="yearSelect" name="yearSelect">
                     {{#each years}}
-                        <option class = "districtOption1" value = {{ this }}>{{ this }}</option>
+                        <option class = "yearOption" value = {{ this }}>{{ this }}</option>
                     {{/each}}
                 </select>
                 </div>
                 
                 <!-- Execute Query button -->
                 <div class="p-1">
-                    <button type="button" id="btnSubmit" class="btn btn-md btn-success btn-sm">Query</button>
+                    <button type="button" id="slicebtn" class="btn btn-md btn-success btn-sm">Query</button>
                 </div>  
             </div> 
         </div> 
@@ -37,7 +37,7 @@
         <th scope="col">Year</th>
         <th scope="col">Quarter</th>
         <th scope="col">Characterization</th>
-        <th scope="col">Sum</th>
+        <th scope="col">Count</th>
       </tr>
     </thead>
     <tbody id="resultRecords">
