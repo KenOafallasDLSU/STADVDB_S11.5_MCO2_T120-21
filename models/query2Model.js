@@ -5,7 +5,7 @@ exports.query2 = (accountID, next) => {
   let sql = 
        `SELECT  ti.month as month, ti.quarter as quarter, ti.year as year, count(tr.timeid) as 'transactions', sum(tr.amount) as 'total'
         FROM  time as ti, transactions as tr
-        WHERE ti.timeid = tr.timeid and tr.accountid = 1
+        WHERE ti.timeid = tr.timeid and tr.accountid = ${accountID}
         GROUP BY  ti.year, ti.quarter, ti.month WITH ROLLUP
         ORDER BY  year, quarter, month;`
         
