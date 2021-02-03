@@ -30,15 +30,15 @@ mysql.db.connect((err) => {
 
 //import routes
 const home = require('./routes/homeRoutes.js')
+const query2 = require('./routes/query2Routes.js')
 const query1 = require('./routes/query1Routes.js')
-//const query2 = require('./routes/query2Routes.js')
 const query3 = require('./routes/query3Routes.js')
 const query4 = require('./routes/query4Routes.js')
 
 //use routes
 app.use('/', home)
+app.use('/query2', query2)
 app.use('/query1', query1)
-//app.use('/query2', query2)
 app.use('/query3', query3)
 app.use('/query4view', query4)
 
