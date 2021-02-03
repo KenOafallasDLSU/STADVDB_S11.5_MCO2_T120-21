@@ -1,0 +1,54 @@
+<div id ='AllQuery'>
+  <div class="row p-1">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-sm-12 input-group">
+
+                <!-- District Drop Down -->
+                <label for="year">Select Year</label>
+                <div class="p-1">
+                    <select id="yearSelect" name="yearSelect">
+                    {{#each years}}
+                        <option class = "yearOption" value = {{ this }}>{{ this }}</option>
+                    {{/each}}
+                </select>
+                </div>
+                
+                <!-- Execute Query button -->
+                <div class="p-1">
+                    <button type="button" id="slicebtn" class="btn btn-md btn-success btn-sm">Query</button>
+                </div>  
+            </div> 
+        </div> 
+          
+    </form>
+  </div>
+
+  <div>
+    <p id="latestQuery">
+        <p class="m-1" id="year"></p>
+    </p>
+  </div>
+
+
+  <table class="table table-striped">
+    <thead class="thread-dark">
+      <tr>
+        <th scope="col">Year</th>
+        <th scope="col">Quarter</th>
+        <th scope="col">Characterization</th>
+        <th scope="col">Count</th>
+      </tr>
+    </thead>
+    <tbody id="resultRecords">
+      {{#each result}}
+        <tr>
+          <td>{{Year}}</th>
+          <td>{{Quarter}}</td>
+          <td>{{Characterization}}</td>
+          <td>{{Sum}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
