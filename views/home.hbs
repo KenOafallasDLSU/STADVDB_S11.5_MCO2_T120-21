@@ -26,10 +26,12 @@
   <!-- Query 1 -->
   <div class="row" id="query11-div">
     <div class="col">
-      <h5>Roll Up</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget scelerisque purus, 
-        at consectetur ante. Sed scelerisque elementum magna, eget sollicitudin ligula fringilla 
-        in. Ut varius hendrerit tristique. Phasellus vel finibus leo, at sollicitudin ex.</p>
+      <a class = 'query name' href = '/query1'>Roll Up</h5>
+      <p>Roll up, also known as drill-up or aggregated operation is a multidimensional 
+        OLAP query operation that performs aggre-gation on a cubed dataset. This sample query 
+       views the results of each column of separate queries side-by-side, comparing the resulting
+       values and selected tables. With the aggregation operation roll up, one can view 
+       these results with just one query</p>
     </div>
   </div>
 
@@ -38,10 +40,14 @@
   <!-- Query 2 -->
   <div class="row" id="query12-div">
     <div class="col">
-      <h5>Drill Down</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget scelerisque purus, 
-        at consectetur ante. Sed scelerisque elementum magna, eget sollicitudin ligula fringilla 
-        in. Ut varius hendrerit tristique. Phasellus vel finibus leo, at sollicitudin ex.</p>
+      <a class = 'query-name' href = '/query2'>Drill Down</a>
+      <p>A Drill Down is nearly the same function as a Roll Up. Instead
+        of going higher in the hierarchy, a Drill Down steps down the
+        hierarchy from a summarised level to view the data in a moredetailed level.
+        The Query shows gathers all transactions made by anaccount and compares 
+        adds them in groups of months, quarter,and the year they were made by 
+        comparing the timeid in thetransactions table to the time table
+      </p>
     </div>
   </div>
 
@@ -50,11 +56,16 @@
   <!-- Query 3 -->
   <div class="row" id="query21-div">
     <div class="col">
-      <h5>Slice</h5>
-      <p>This query makes use of the <b><i>card and disposition tables</i></b> to obtain the
-      number of clients who own the following types of cards offered by the Czech bank -
-      gold card, a classic card, and a junior card. Each client is also distinguished by their
-      disposition, whether they are classified as an owner or a dispotent.</p>
+      <a class = 'query-name' href = '/query3'>Slice</a>
+      <p>A Slice Operation forms a subset of a cubed dataset by specifying a 
+        single and specific value from one of the dimensionsof the three dimensional 
+        cube and settling with that to create atwo dimensional site of the table.
+        This query uses the slice operation to determine the count ofeach transaction 
+        characterization type that has occurred in ayear that a user would input. 
+        The results give a better outlookon how often each characterization is used for 
+        each quarterof the year and would help the database owner determine thefrequency of 
+        transactions done in a selected year.
+      </p>
     </div>
   </div>
   <hr>
@@ -62,7 +73,7 @@
   <!-- Query 4 -->
   <div class="row" id="query22-div">
     <div class="col">
-      <h5>Dice</h5>
+      <a class = 'query-name' href = '/query4view'>Dice</a>
       <p>This Query aims to compare 2 Districts with 2 different characterization types and 2 different quarters using Cube as the OLAP Query . </p>
     </div>
   </div>
